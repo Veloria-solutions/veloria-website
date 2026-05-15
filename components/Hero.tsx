@@ -14,11 +14,7 @@ const fadeUp = {
   visible: {
     opacity: 1,
     y: 0,
-<<<<<<< HEAD
     transition: { duration: 0.85, ease: [0.22, 1, 0.36, 1] as const },
-=======
-    transition: { duration: 0.85, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] },
->>>>>>> 13c6f579e6ede47926394f411be4fd65cce11854
   },
 };
 
