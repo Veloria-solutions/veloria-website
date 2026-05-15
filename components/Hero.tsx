@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Play } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 const stagger = {
@@ -14,7 +14,7 @@ const fadeUp = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.85, ease: [0.22, 1, 0.36, 1] },
+    transition: { duration: 0.85, ease: [0.22, 1, 0.36, 1] as const },
   },
 };
 
@@ -98,7 +98,7 @@ export default function Hero() {
                 <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-[#8DBBFF]" />
               </span>
               <span className="text-[#A1A1A1] text-[11px] tracking-[0.22em] uppercase">
-                Next-Generation AI Systems
+                Websites &amp; Digital Tools for Businesses
               </span>
             </div>
           </motion.div>
@@ -119,8 +119,9 @@ export default function Hero() {
             variants={fadeUp}
             className="text-[#A1A1A1] text-lg md:text-xl leading-relaxed max-w-2xl"
           >
-            Veloria Solutions delivers premium AI, automation, and scalable
-            technology systems for modern businesses ready to lead tomorrow.
+            We build professional websites and smart tools that help your
+            business attract more customers and run more smoothly — no tech
+            knowledge needed.
           </motion.p>
 
           {/* CTA buttons */}
@@ -129,7 +130,7 @@ export default function Hero() {
             className="flex flex-col sm:flex-row items-center gap-4"
           >
             <Link
-              href="#contact"
+              href="#services"
               className="group flex items-center gap-2.5 px-7 py-3.5 bg-white text-black text-[13.5px] font-bold tracking-wide rounded-full hover:bg-[#8DBBFF] hover:scale-[1.04] transition-all duration-300 shadow-xl shadow-white/10"
             >
               Get Started
@@ -137,13 +138,6 @@ export default function Hero() {
                 size={15}
                 className="group-hover:translate-x-1 transition-transform duration-200"
               />
-            </Link>
-            <Link
-              href="#solutions"
-              className="flex items-center gap-2.5 px-7 py-3.5 border border-white/14 text-white text-[13.5px] font-medium tracking-wide rounded-full hover:border-white/30 hover:bg-white/[0.04] transition-all duration-300"
-            >
-              <Play size={13} className="text-[#8DBBFF]" fill="currentColor" />
-              View Solutions
             </Link>
           </motion.div>
 
@@ -160,15 +154,15 @@ export default function Hero() {
                   <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
                 </span>
                 <span className="text-[#A1A1A1] text-[11px] tracking-[0.18em] uppercase">
-                  Live Systems
+                  Active Now
                 </span>
               </div>
 
               <div className="flex items-center gap-7">
                 {[
-                  { value: "50+", label: "Projects" },
-                  { value: "99.9%", label: "Uptime" },
-                  { value: "↑40%", label: "Efficiency", accent: true },
+                  { value: "20+", label: "Projects" },
+                  { value: "5★", label: "Reviews" },
+                  { value: "48hr", label: "Response", accent: true },
                 ].map((stat, i) => (
                   <div key={i} className="flex flex-col items-center gap-0.5">
                     <span

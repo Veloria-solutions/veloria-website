@@ -7,26 +7,26 @@ const steps = [
   {
     num: "01",
     icon: Search,
-    title: "Discovery",
-    desc: "Deep-dive into your business needs, technical landscape, and objectives to craft the optimal strategy.",
+    title: "We Listen",
+    desc: "We sit down with you to understand your business, your goals, and exactly what you need — no jargon, just a conversation.",
   },
   {
     num: "02",
     icon: Layers,
-    title: "Architecture",
-    desc: "Designing robust, scalable system architecture with performance and security baked in from day one.",
+    title: "We Plan",
+    desc: "We put together a clear plan and show you what we're going to build before any work begins, so there are no surprises.",
   },
   {
     num: "03",
     icon: Code2,
-    title: "Development",
-    desc: "Precision engineering using best-in-class technologies, rigorous testing, and clean code standards.",
+    title: "We Build",
+    desc: "We carefully build your website or tool, testing every part along the way to make sure everything looks and works perfectly.",
   },
   {
     num: "04",
     icon: Rocket,
-    title: "Deployment",
-    desc: "Seamless launch with zero-downtime pipelines, continuous monitoring, and proactive support.",
+    title: "We Launch",
+    desc: "We go live with your website and stay available to help — you're never left on your own after handover.",
   },
 ];
 
@@ -48,12 +48,12 @@ export default function ProcessSection() {
             </span>
           </div>
           <h2 className="text-4xl md:text-[58px] font-black leading-tight tracking-tight mb-5 font-satoshi">
-            From Vision to{" "}
-            <span className="gradient-text">Reality</span>
+            How It{" "}
+            <span className="gradient-text">Works</span>
           </h2>
           <p className="text-[#A1A1A1] text-lg max-w-lg mx-auto leading-relaxed">
-            A proven four-phase methodology that turns complex ideas into
-            production-grade systems, on time.
+            A simple four-step process to get your business online — clear,
+            straightforward, and stress-free.
           </p>
         </motion.div>
 

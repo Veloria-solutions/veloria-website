@@ -1,22 +1,20 @@
 "use client";
 
 import Link from "next/link";
-import { Twitter, Linkedin, Github, Mail } from "lucide-react";
+import { Instagram, Mail } from "lucide-react";
 import VeloriaLogo from "./VeloriaLogo";
 
 const navLinks = [
-  { label: "Home", href: "#home" },
-  { label: "Services", href: "#services" },
-  { label: "About", href: "#about" },
-  { label: "Solutions", href: "#solutions" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "/" },
+  { label: "Services", href: "/#services" },
+  { label: "About", href: "/#about" },
+  { label: "Contact", href: "/#contact" },
+  { label: "Websites", href: "/websites" },
 ];
 
 const social = [
-  { icon: Twitter,  href: "#",                             label: "Twitter / X" },
-  { icon: Linkedin, href: "#",                             label: "LinkedIn"     },
-  { icon: Github,   href: "#",                             label: "GitHub"       },
-  { icon: Mail,     href: "mailto:hello@veloria.solutions", label: "Email"       },
+  { icon: Instagram, href: "https://www.instagram.com/veloria.solutions", label: "Instagram" },
+  { icon: Mail,      href: "mailto:info@veloria.solutions",                label: "Email"     },
 ];
 
 const legal = [
@@ -34,8 +32,8 @@ export default function Footer() {
           <div className="md:col-span-5 flex flex-col gap-5">
             <VeloriaLogo />
             <p className="text-[#A1A1A1] text-sm leading-relaxed max-w-xs">
-              Building intelligent digital solutions for modern businesses. Premium
-              AI, automation, and scalable technology systems.
+              Professional websites and smart tools for businesses — built to
+              help you attract more customers and grow online.
             </p>
             <div className="flex items-center gap-2.5">
               {social.map((s) => (
@@ -77,14 +75,14 @@ export default function Footer() {
             </h4>
             <div className="flex flex-col gap-3">
               <Link
-                href="mailto:hello@veloria.solutions"
+                href="mailto:info@veloria.solutions"
                 className="text-[#A1A1A1] hover:text-white text-[13.5px] transition-colors"
               >
-                hello@veloria.solutions
+                info@veloria.solutions
               </Link>
               <span className="text-[#A1A1A1] text-[13.5px]">veloria.solutions</span>
               <Link
-                href="#contact"
+                href="/#contact"
                 className="mt-2 inline-flex items-center gap-2 px-5 py-2.5 bg-white text-black text-[12px] font-semibold tracking-wide rounded-full hover:bg-[#8DBBFF] transition-all duration-300 w-fit"
               >
                 Book Consultation

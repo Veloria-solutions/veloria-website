@@ -7,22 +7,22 @@ const items = [
   {
     icon: ShieldCheck,
     title: "Secure",
-    desc: "Enterprise-grade security protocols protecting every layer of your infrastructure by design.",
+    desc: "Your website and customer information are kept safe and protected at all times.",
   },
   {
     icon: Zap,
-    title: "Scalable",
-    desc: "Systems architected to scale seamlessly from MVP to millions of users without rearchitecting.",
+    title: "Built to Last",
+    desc: "Your website will keep working reliably as your business grows — no need to start over later.",
   },
   {
     icon: BrainCircuit,
-    title: "AI Powered",
-    desc: "Intelligent automation and machine learning embedded at the core of every solution we build.",
+    title: "Works Smarter",
+    desc: "We use the latest technology to save you time, reduce manual work, and make your business more efficient.",
   },
   {
     icon: Building2,
-    title: "Enterprise Ready",
-    desc: "Production-grade reliability, SLA guarantees, and compliance standards trusted globally.",
+    title: "Professional",
+    desc: "Dependable and polished — built to the same high standards used by established businesses worldwide.",
   },
 ];
 

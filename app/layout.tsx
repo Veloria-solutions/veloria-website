@@ -9,15 +9,16 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Veloria Solutions — Premium AI & Technology Systems",
+  title: "Veloria Solutions — Professional Websites for Businesses",
   description:
-    "Veloria Solutions delivers premium AI, automation, and scalable technology systems for modern businesses.",
-  keywords: ["AI", "automation", "software", "cloud", "cybersecurity", "consulting"],
+    "Veloria Solutions builds professional websites and smart tools for businesses. Get online, attract more customers, and grow — no tech knowledge needed.",
+  keywords: ["business website", "website design", "small business website", "professional website", "web design Ireland", "website builder"],
   authors: [{ name: "Veloria Solutions" }],
   creator: "Veloria Solutions",
   openGraph: {
-    title: "Veloria Solutions — Premium AI & Technology Systems",
-    description: "Building intelligent digital solutions for modern businesses.",
+    title: "Veloria Solutions — Professional Websites for Businesses",
+    description:
+      "We build professional websites for businesses. Get online and attract more customers — no tech knowledge needed.",
     url: "https://veloria.solutions",
     siteName: "Veloria Solutions",
     type: "website",
@@ -25,7 +26,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Veloria Solutions",
-    description: "Building intelligent digital solutions for modern businesses.",
+    description:
+      "We build professional websites for businesses. Get online and attract more customers — no tech knowledge needed.",
   },
 };
 

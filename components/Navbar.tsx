@@ -7,11 +7,10 @@ import Link from "next/link";
 import VeloriaLogo from "./VeloriaLogo";
 
 const navLinks = [
-  { label: "Home", href: "#home" },
-  { label: "Services", href: "#services" },
-  { label: "About", href: "#about" },
-  { label: "Solutions", href: "#solutions" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "/" },
+  { label: "Services", href: "/#services" },
+  { label: "About", href: "/#about" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 export default function Navbar() {
@@ -37,7 +36,7 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
-        <Link href="#home" aria-label="Veloria Solutions Home">
+        <Link href="/" aria-label="Veloria Solutions Home">
           <VeloriaLogo />
         </Link>
 
@@ -58,7 +57,7 @@ export default function Navbar() {
         {/* CTA + Mobile toggle */}
         <div className="flex items-center gap-3">
           <Link
-            href="#contact"
+            href="/#contact"
             className="hidden md:inline-flex items-center px-5 py-2.5 bg-white text-black text-[13px] font-semibold tracking-wide rounded-full hover:bg-[#8DBBFF] hover:scale-[1.03] transition-all duration-300 shadow-lg shadow-white/5"
           >
             Book Consultation

@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 import { CheckCircle2 } from "lucide-react";
 
 const highlights = [
-  "Future-focused engineering principles",
-  "AI-first approach to every solution",
-  "Precision-built, infinitely scalable architectures",
-  "End-to-end ownership from concept to deployment",
+  "Built using the latest, proven technology",
+  "Smart tools included in everything we build",
+  "Grows with your business, no matter the size",
+  "We handle everything from start to finish",
 ];
 
 export default function AboutSection() {
@@ -39,24 +39,25 @@ export default function AboutSection() {
             </div>
 
             <h2 className="text-4xl md:text-[52px] font-black leading-tight tracking-tight mb-7 font-satoshi">
-              Engineering{" "}
-              <span className="gradient-text">Tomorrow</span>,<br />
-              Delivered Today.
+              Real Solutions,{" "}
+              <span className="gradient-text">Built Around</span>
+              <br />
+              Your Business.
             </h2>
 
             <div className="flex flex-col gap-4 text-[#A1A1A1] text-[15px] leading-relaxed mb-10">
               <p>
-                We are Veloria Solutions — a collective of engineers, designers, and
-                strategists building the next generation of intelligent technology systems.
+                We are Veloria Solutions — a team of web designers, developers, and
+                problem-solvers dedicated to helping businesses like yours succeed online.
               </p>
               <p>
-                Founded on the principles of precision and innovation, we engineer solutions
-                that don't just solve today's problems — they evolve with your ambitions.
-                Every system we build is designed for the long game.
+                We take the time to understand your business before we build anything.
+                Every website and tool we create is made to fit the way you work — not
+                the other way around.
               </p>
               <p>
-                Our approach fuses cutting-edge AI with rigorous engineering, delivering
-                technology that scales with confidence and performs under pressure.
+                Whether you need a simple website or something more involved, we make
+                the whole process easy, clear, and stress-free from start to finish.
               </p>
             </div>
 
@@ -146,7 +147,7 @@ export default function AboutSection() {
                   transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut" }}
                   className="absolute top-7 right-7 glass rounded-xl px-4 py-3"
                 >
-                  <div className="text-white font-black text-xl font-satoshi leading-none">50+</div>
+                  <div className="text-white font-black text-xl font-satoshi leading-none">20+</div>
                   <div className="text-[#A1A1A1] text-[10px] tracking-[0.18em] mt-1">PROJECTS</div>
                 </motion.div>
 
@@ -156,9 +157,9 @@ export default function AboutSection() {
                   className="absolute bottom-7 left-7 glass rounded-xl px-4 py-3"
                 >
                   <div className="text-[#8DBBFF] font-black text-xl font-satoshi leading-none">
-                    99.9%
+                    5★
                   </div>
-                  <div className="text-[#A1A1A1] text-[10px] tracking-[0.18em] mt-1">UPTIME SLA</div>
+                  <div className="text-[#A1A1A1] text-[10px] tracking-[0.18em] mt-1">RATING</div>
                 </motion.div>
               </div>
             </div>
