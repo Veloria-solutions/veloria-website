@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
+import { WovenCanvas } from "@/components/ui/woven-light-hero";
 
 const stagger = {
   hidden: {},
@@ -25,62 +26,7 @@ export default function Hero() {
       className="relative min-h-screen flex items-center justify-center overflow-hidden grid-bg"
     >
       {/* ── Background FX ─────────────────────────────────── */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
-        {/* Primary accent orb — top-left */}
-        <motion.div
-          animate={{ x: [0, 40, -20, 0], y: [0, -30, 20, 0] }}
-          transition={{ duration: 22, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute -top-32 -left-32 w-[700px] h-[700px] rounded-full"
-          style={{
-            background: "radial-gradient(circle, rgba(141,187,255,0.13) 0%, transparent 68%)",
-            filter: "blur(80px)",
-          }}
-        />
-        {/* Secondary orb — bottom-right */}
-        <motion.div
-          animate={{ x: [0, -40, 20, 0], y: [0, 30, -20, 0] }}
-          transition={{ duration: 28, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute -bottom-40 -right-20 w-[600px] h-[600px] rounded-full"
-          style={{
-            background: "radial-gradient(circle, rgba(141,187,255,0.09) 0%, transparent 68%)",
-            filter: "blur(100px)",
-          }}
-        />
-        {/* Centre pulse */}
-        <motion.div
-          animate={{ scale: [1, 1.12, 0.96, 1] }}
-          transition={{ duration: 14, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] rounded-full"
-          style={{
-            background: "radial-gradient(circle, rgba(141,187,255,0.04) 0%, transparent 55%)",
-            filter: "blur(120px)",
-          }}
-        />
-
-        {/* Light streaks */}
-        {[...Array(6)].map((_, i) => (
-          <motion.div
-            key={i}
-            animate={{ opacity: [0, 0.35, 0], x: ["-5%", "105%"] }}
-            transition={{
-              duration: 7 + i * 1.5,
-              repeat: Infinity,
-              delay: i * 2.5,
-              ease: "linear",
-            }}
-            className="absolute"
-            style={{
-              top: `${12 + i * 13}%`,
-              left: 0,
-              width: 220,
-              height: 1,
-              background:
-                "linear-gradient(90deg, transparent, rgba(141,187,255,0.5), transparent)",
-              filter: "blur(1px)",
-            }}
-          />
-        ))}
-      </div>
+      <WovenCanvas />
 
       {/* ── Main content ──────────────────────────────────── */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 pt-36 pb-24 flex flex-col items-center text-center">
