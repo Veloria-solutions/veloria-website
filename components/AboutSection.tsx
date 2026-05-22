@@ -1,6 +1,14 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { CheckCircle2 } from "lucide-react";
+
+const highlights = [
+  "Built using the latest, proven technology",
+  "Smart tools included in everything we build",
+  "Grows with your business, no matter the size",
+  "We handle everything from start to finish",
+];
 
 export default function AboutSection() {
   return (
@@ -53,6 +61,21 @@ export default function AboutSection() {
               </p>
             </div>
 
+            <div className="flex flex-col gap-3.5">
+              {highlights.map((item, i) => (
+                <motion.div
+                  key={item}
+                  initial={{ opacity: 0, x: -16 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.2 + i * 0.09, duration: 0.5 }}
+                  className="flex items-center gap-3"
+                >
+                  <CheckCircle2 size={17} className="text-[#8DBBFF] shrink-0" />
+                  <span className="text-white text-[14px]">{item}</span>
+                </motion.div>
+              ))}
+            </div>
           </motion.div>
 
           {/* Right — futuristic visual */}
