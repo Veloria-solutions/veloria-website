@@ -76,7 +76,7 @@ export default function Hero() {
             className="flex flex-col sm:flex-row items-center gap-4"
           >
             <Link
-              href="#services"
+              href="/services"
               className="group flex items-center gap-2.5 px-7 py-3.5 bg-white text-black text-[13.5px] font-bold tracking-wide rounded-full hover:bg-[#8DBBFF] hover:scale-[1.04] transition-all duration-300 shadow-xl shadow-white/10"
             >
               Get Started

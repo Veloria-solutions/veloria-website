@@ -67,7 +67,7 @@ export default function CTASection() {
               />
             </Link>
             <Link
-              href="#services"
+              href="/services"
               className="px-8 py-4 border border-white/14 text-white text-[13.5px] font-medium tracking-wide rounded-full hover:border-white/30 hover:bg-white/[0.04] transition-all duration-300"
             >
               See What We Offer
