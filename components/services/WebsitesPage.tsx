@@ -52,7 +52,7 @@ export default function WebsitesPage() {
           <motion.div
             initial="hidden"
             animate="visible"
-            variants={{ visible: { transition: { staggerChildren: 0.12 } } }}
+            variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.12 } } }}
             className="flex flex-col items-center gap-7"
           >
             <motion.div variants={fadeUp}>
