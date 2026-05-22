@@ -16,7 +16,7 @@ const services = [
   {
     icon: Sparkles,
     title: "The Bundle",
-    tag: "Best Value",
+    tag: "Website + Automation",
     desc: "Website and AI automation built together — fully integrated from day one.",
     href: "/services/bundle",
     featured: true,
