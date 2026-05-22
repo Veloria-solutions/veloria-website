@@ -54,8 +54,8 @@ export default function Hero() {
             variants={fadeUp}
             className="text-5xl sm:text-6xl md:text-7xl lg:text-[88px] font-black leading-[0.93] tracking-tight max-w-5xl font-satoshi"
           >
-            Make websites that{" "}
-            <span className="gradient-text">convert.</span>
+            We build. We automate.{" "}
+            <span className="gradient-text">You grow.</span>
           </motion.h1>
 
           {/* CTA buttons */}
