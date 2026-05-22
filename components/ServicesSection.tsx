@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Bot, Code2, Globe, Layout } from "lucide-react";
+import { Bot, Layout } from "lucide-react";
 import Link from "next/link";
 
 const services = [
@@ -17,18 +17,6 @@ const services = [
     title: "AI Automation",
     desc: "We set up smart tools that handle repetitive tasks for you automatically — saving your team hours of work every week.",
     tag: "Most Popular",
-  },
-  {
-    icon: Code2,
-    title: "Custom Software",
-    desc: "Software built from scratch, just for your business — designed around how you work and easy for your team to use every day.",
-    tag: null,
-  },
-  {
-    icon: Globe,
-    title: "Web Platforms",
-    desc: "Online tools and apps your customers can use directly — simple to navigate, reliable, and built to help your business grow.",
-    tag: null,
   },
 ];
 

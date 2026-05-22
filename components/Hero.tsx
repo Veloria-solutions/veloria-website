@@ -54,21 +54,9 @@ export default function Hero() {
             variants={fadeUp}
             className="text-5xl sm:text-6xl md:text-7xl lg:text-[88px] font-black leading-[0.93] tracking-tight max-w-5xl font-satoshi"
           >
-            Building{" "}
-            <span className="gradient-text">Intelligent</span>
-            <br className="hidden sm:block" />
-            {" "}Digital Solutions.
+            Make websites that{" "}
+            <span className="gradient-text">convert.</span>
           </motion.h1>
-
-          {/* Subheadline */}
-          <motion.p
-            variants={fadeUp}
-            className="text-[#A1A1A1] text-lg md:text-xl leading-relaxed max-w-2xl"
-          >
-            We build professional websites and smart tools that help your
-            business attract more customers and run more smoothly — no tech
-            knowledge needed.
-          </motion.p>
 
           {/* CTA buttons */}
           <motion.div
