@@ -36,19 +36,6 @@ export default function Hero() {
           animate="visible"
           className="flex flex-col items-center gap-8"
         >
-          {/* Pill badge */}
-          <motion.div variants={fadeUp}>
-            <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-white/10 bg-white/[0.04] backdrop-blur-sm">
-              <span className="relative flex h-1.5 w-1.5">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#8DBBFF] opacity-75" />
-                <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-[#8DBBFF]" />
-              </span>
-              <span className="text-[#A1A1A1] text-[11px] tracking-[0.22em] uppercase">
-                Websites &amp; Digital Tools for Businesses
-              </span>
-            </div>
-          </motion.div>
-
           {/* Headline */}
           <motion.h1
             variants={fadeUp}
@@ -75,45 +62,6 @@ export default function Hero() {
             </Link>
           </motion.div>
 
-          {/* Floating stats card */}
-          <motion.div variants={fadeUp} className="mt-4 w-full max-w-lg">
-            <motion.div
-              animate={{ y: [0, -9, 0] }}
-              transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut" }}
-              className="glass rounded-2xl px-6 py-5 flex items-center justify-between glow-blue"
-            >
-              <div className="flex items-center gap-2.5">
-                <span className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
-                  <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
-                </span>
-                <span className="text-[#A1A1A1] text-[11px] tracking-[0.18em] uppercase">
-                  Active Now
-                </span>
-              </div>
-
-              <div className="flex items-center gap-7">
-                {[
-                  { value: "20+", label: "Projects" },
-                  { value: "5★", label: "Reviews" },
-                  { value: "48hr", label: "Response", accent: true },
-                ].map((stat, i) => (
-                  <div key={i} className="flex flex-col items-center gap-0.5">
-                    <span
-                      className={`font-black text-lg leading-none font-satoshi ${
-                        stat.accent ? "text-[#8DBBFF]" : "text-white"
-                      }`}
-                    >
-                      {stat.value}
-                    </span>
-                    <span className="text-[#A1A1A1] text-[9.5px] tracking-[0.2em] uppercase">
-                      {stat.label}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </motion.div>
-          </motion.div>
         </motion.div>
 
         {/* Scroll indicator */}
