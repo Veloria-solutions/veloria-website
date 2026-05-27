@@ -32,8 +32,7 @@ export default function Footer() {
           <div className="md:col-span-5 flex flex-col gap-5">
             <VeloriaLogo />
             <p className="text-[#A1A1A1] text-sm leading-relaxed max-w-xs">
-              Professional websites and smart tools for businesses — built to
-              help you attract more customers and grow online.
+              Veloria Solutions delivers professional website design, intelligent chatbots, reservation systems, and automated appointment booking services.
             </p>
             <div className="flex items-center gap-2.5">
               {social.map((s) => (
