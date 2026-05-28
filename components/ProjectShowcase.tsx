@@ -10,7 +10,7 @@ const projects = [
 
 export default function ProjectShowcase() {
   return (
-    <section className="py-24 bg-[#0C0C0C]">
+    <section className="py-24 bg-transparent">
       <div className="max-w-4xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
