@@ -1,0 +1,76 @@
+<h2>Services Page Layout</h2>
+<p class="subtitle">How should the three service tiers be arranged?</p>
+
+<div class="cards">
+
+  <!-- Option A -->
+  <div class="card" data-choice="a" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#111;padding:20px;border-radius:8px;font-family:sans-serif;">
+      <div style="text-align:center;margin-bottom:12px;color:#8DBBFF;font-size:11px;letter-spacing:0.15em;text-transform:uppercase;">Our Services</div>
+      <div style="display:flex;gap:10px;align-items:stretch;">
+        <!-- Card 1 -->
+        <div style="flex:1;background:#1a1a1a;border:1px solid #333;border-radius:10px;padding:14px;">
+          <div style="font-size:10px;color:#8DBBFF;margin-bottom:8px;">🌐</div>
+          <div style="color:#fff;font-weight:700;font-size:12px;margin-bottom:4px;">Websites</div>
+          <div style="color:#777;font-size:10px;line-height:1.4;">Professional sites that look great and load fast.</div>
+          <div style="margin-top:10px;padding:5px;background:#222;border-radius:5px;text-align:center;color:#aaa;font-size:9px;">View packages →</div>
+        </div>
+        <!-- Card 2 — Bundle (featured) -->
+        <div style="flex:1;background:#1a1a1a;border:2px solid #8DBBFF;border-radius:10px;padding:14px;position:relative;">
+          <div style="position:absolute;top:-9px;left:50%;transform:translateX(-50%);background:#8DBBFF;color:#000;font-size:8px;font-weight:700;padding:2px 8px;border-radius:20px;white-space:nowrap;">BEST VALUE</div>
+          <div style="font-size:10px;color:#8DBBFF;margin-bottom:8px;">⭐</div>
+          <div style="color:#fff;font-weight:700;font-size:12px;margin-bottom:4px;">Bundle</div>
+          <div style="color:#777;font-size:10px;line-height:1.4;">Website + AI automation, built together from day one.</div>
+          <div style="margin-top:10px;padding:5px;background:#8DBBFF;border-radius:5px;text-align:center;color:#000;font-size:9px;font-weight:700;">Get the bundle →</div>
+        </div>
+        <!-- Card 3 -->
+        <div style="flex:1;background:#1a1a1a;border:1px solid #333;border-radius:10px;padding:14px;">
+          <div style="font-size:10px;color:#8DBBFF;margin-bottom:8px;">🤖</div>
+          <div style="color:#fff;font-weight:700;font-size:12px;margin-bottom:4px;">AI Automation</div>
+          <div style="color:#777;font-size:10px;line-height:1.4;">Smart tools that save your team hours each week.</div>
+          <div style="margin-top:10px;padding:5px;background:#222;border-radius:5px;text-align:center;color:#aaa;font-size:9px;">View packages →</div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>A — Three Equal Columns</h3>
+      <p>Bundle sits in the middle, all same width. Clean and balanced. Bundle stands out via border colour and badge only.</p>
+    </div>
+  </div>
+
+  <!-- Option B -->
+  <div class="card" data-choice="b" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#111;padding:20px;border-radius:8px;font-family:sans-serif;">
+      <div style="text-align:center;margin-bottom:12px;color:#8DBBFF;font-size:11px;letter-spacing:0.15em;text-transform:uppercase;">Our Services</div>
+      <div style="display:flex;gap:10px;align-items:center;">
+        <!-- Card 1 — smaller -->
+        <div style="flex:0.8;background:#1a1a1a;border:1px solid #333;border-radius:10px;padding:12px;opacity:0.85;">
+          <div style="font-size:10px;color:#8DBBFF;margin-bottom:6px;">🌐</div>
+          <div style="color:#fff;font-weight:700;font-size:11px;margin-bottom:4px;">Websites</div>
+          <div style="color:#777;font-size:9px;line-height:1.4;">Professional sites built to convert.</div>
+          <div style="margin-top:8px;padding:4px;background:#222;border-radius:5px;text-align:center;color:#aaa;font-size:8px;">Learn more →</div>
+        </div>
+        <!-- Card 2 — Bundle taller/larger -->
+        <div style="flex:1.2;background:linear-gradient(135deg,#1a1a2e,#1a1a1a);border:2px solid #8DBBFF;border-radius:12px;padding:18px;position:relative;box-shadow:0 0 30px rgba(141,187,255,0.15);">
+          <div style="position:absolute;top:-10px;left:50%;transform:translateX(-50%);background:#8DBBFF;color:#000;font-size:8px;font-weight:700;padding:2px 10px;border-radius:20px;white-space:nowrap;">✦ MOST POPULAR</div>
+          <div style="font-size:14px;color:#8DBBFF;margin-bottom:8px;">⭐</div>
+          <div style="color:#fff;font-weight:700;font-size:13px;margin-bottom:4px;">Bundle</div>
+          <div style="color:#999;font-size:10px;line-height:1.4;margin-bottom:10px;">Website + AI automation. The complete package for businesses ready to grow.</div>
+          <div style="padding:6px;background:#8DBBFF;border-radius:6px;text-align:center;color:#000;font-size:9px;font-weight:700;">Get the bundle →</div>
+        </div>
+        <!-- Card 3 — smaller -->
+        <div style="flex:0.8;background:#1a1a1a;border:1px solid #333;border-radius:10px;padding:12px;opacity:0.85;">
+          <div style="font-size:10px;color:#8DBBFF;margin-bottom:6px;">🤖</div>
+          <div style="color:#fff;font-weight:700;font-size:11px;margin-bottom:4px;">AI Automation</div>
+          <div style="color:#777;font-size:9px;line-height:1.4;">Smart tools that save you hours.</div>
+          <div style="margin-top:8px;padding:4px;background:#222;border-radius:5px;text-align:center;color:#aaa;font-size:8px;">Learn more →</div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>B — Bundle Elevated Centre</h3>
+      <p>Bundle is taller and wider, with a glow. Flanking cards are slightly smaller and dimmed. Maximum visual hierarchy.</p>
+    </div>
+  </div>
+
+</div>
