@@ -6,6 +6,7 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CursorGlow from "@/components/CursorGlow";
+import { DottedSurface } from "@/components/ui/dotted-surface";
 
 const starterFeatures = [
   "Up to 5 pages (e.g. Home, About, Services, Gallery, Contact)",
@@ -235,12 +236,12 @@ function ProjectCard({
 
 export default function WebsitesPage() {
   return (
-    <>
+    <DottedSurface className="min-h-screen">
       <CursorGlow />
       <Navbar />
       <main>
         {/* ── Hero ─────────────────────────────────────────── */}
-        <section className="pt-40 pb-24 relative overflow-hidden grid-bg">
+        <section className="pt-40 pb-24 relative overflow-hidden">
           <div
             aria-hidden="true"
             className="absolute -top-32 left-1/2 -translate-x-1/2 w-[800px] h-[800px] rounded-full pointer-events-none"
@@ -439,6 +440,6 @@ export default function WebsitesPage() {
         </section>
       </main>
       <Footer />
-    </>
+    </DottedSurface>
   );
 }
