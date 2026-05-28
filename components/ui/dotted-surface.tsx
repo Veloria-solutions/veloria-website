@@ -132,8 +132,18 @@ export function DottedSurface({ className, ...props }: DottedSurfaceProps) {
   return (
     <div
       ref={containerRef}
-      className={cn('pointer-events-none fixed inset-0 z-[-1]', className)}
+      className={cn('pointer-events-none fixed inset-0 z-[0] bg-[#090909]', className)}
       {...props}
-    />
+    >
+      {/* Gradient mask — fades all edges so the particle field blends seamlessly */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          zIndex: 1,
+          background:
+            'linear-gradient(to bottom, #090909 0%, transparent 18%, transparent 82%, #090909 100%)',
+        }}
+      />
+    </div>
   );
 }
