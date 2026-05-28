@@ -6,13 +6,14 @@ import { DottedSurface } from "@/components/ui/dotted-surface";
 
 export default function BookingServicePage() {
   return (
-    <DottedSurface className="min-h-screen">
+    <>
+      <DottedSurface />
       <CursorGlow />
       <Navbar />
       <main>
         <BookingPage />
       </main>
       <Footer />
-    </DottedSurface>
+    </>
   );
 }

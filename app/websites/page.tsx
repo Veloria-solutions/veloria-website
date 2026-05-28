@@ -236,7 +236,8 @@ function ProjectCard({
 
 export default function WebsitesPage() {
   return (
-    <DottedSurface className="min-h-screen">
+    <>
+      <DottedSurface />
       <CursorGlow />
       <Navbar />
       <main>
@@ -440,6 +441,6 @@ export default function WebsitesPage() {
         </section>
       </main>
       <Footer />
-    </DottedSurface>
+    </>
   );
 }
