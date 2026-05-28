@@ -80,7 +80,7 @@ const bundles: PricingCardProps[] = [
 
 export default function ServicesSection() {
   return (
-    <section id="services" className="py-32 relative">
+    <section id="services" className="py-32 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         <ModernPricingPage
           title={

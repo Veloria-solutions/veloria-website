@@ -68,12 +68,8 @@ function AnimatedBackground() {
   );
 }
 
-// Cards 1&5 pushed down most, 2&4 medium, 3 (centre) stays at top
-const TRANSLATE_Y = [40, 20, 0, 20, 40];
-
-function PricingCard({ plan, index }: { plan: PricingCardProps; index: number }) {
+function PricingCard({ plan }: { plan: PricingCardProps }) {
   const Icon = plan.icon;
-  const translateY = TRANSLATE_Y[index] ?? 0;
 
   return (
     <motion.div
@@ -85,8 +81,7 @@ function PricingCard({ plan, index }: { plan: PricingCardProps; index: number })
           transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] },
         },
       }}
-      style={{ transform: `translateY(${translateY}px)` }}
-      className="relative flex flex-col h-full"
+      className="relative flex flex-col"
     >
       {plan.isPopular && (
         <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 z-10 whitespace-nowrap">
@@ -118,7 +113,7 @@ function PricingCard({ plan, index }: { plan: PricingCardProps; index: number })
           )}
 
           {/* Title */}
-          <h3 className="text-white font-bold text-[20px] leading-snug font-satoshi">
+          <h3 className="text-white font-bold text-[18px] leading-snug font-satoshi">
             {plan.planName}
           </h3>
 
@@ -130,10 +125,10 @@ function PricingCard({ plan, index }: { plan: PricingCardProps; index: number })
             {plan.features.map((f) => (
               <li key={f} className="flex items-start gap-2.5">
                 <Check
-                  size={14}
+                  size={13}
                   className="text-[#8DBBFF] mt-[3px] shrink-0"
                 />
-                <span className="text-[#A1A1A1] text-[14px] leading-relaxed">
+                <span className="text-[#A1A1A1] text-[13px] leading-relaxed">
                   {f}
                 </span>
               </li>
@@ -143,7 +138,7 @@ function PricingCard({ plan, index }: { plan: PricingCardProps; index: number })
           {/* CTA */}
           <Link
             href={plan.href ?? "/#contact"}
-            className={`mt-3 flex items-center justify-center py-3 px-5 rounded-full text-[14px] font-bold tracking-wide transition-all duration-300 ${
+            className={`mt-3 flex items-center justify-center py-3 px-5 rounded-full text-[13px] font-bold tracking-wide transition-all duration-300 ${
               plan.buttonVariant === "primary" || plan.isPopular
                 ? "bg-[#8DBBFF] text-black hover:bg-white"
                 : "bg-white/[0.06] text-white border border-white/10 hover:bg-[#8DBBFF] hover:text-black hover:border-[#8DBBFF]"
@@ -195,10 +190,10 @@ export function ModernPricingPage({
             hidden: {},
             visible: { transition: { staggerChildren: 0.08 } },
           }}
-          className="relative z-10 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-5 gap-4 items-start pb-[40px]"
+          className="relative z-10 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-5 gap-4 items-start"
         >
-          {plans.map((plan, i) => (
-            <PricingCard key={plan.planName} plan={plan} index={i} />
+          {plans.map((plan) => (
+            <PricingCard key={plan.planName} plan={plan} />
           ))}
         </motion.div>
       </div>

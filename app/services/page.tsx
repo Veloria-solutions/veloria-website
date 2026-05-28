@@ -7,15 +7,13 @@ import { DottedSurface } from "@/components/ui/dotted-surface";
 export default function ServicesPage() {
   return (
     <>
-      <div className="relative z-[1]">
-        <DottedSurface />
-        <CursorGlow />
-        <Navbar />
-        <main>
-          <ServicesSection />
-        </main>
-        <Footer />
-      </div>
+      <DottedSurface />
+      <CursorGlow />
+      <Navbar />
+      <main>
+        <ServicesSection />
+      </main>
+      <Footer />
     </>
   );
 }

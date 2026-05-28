@@ -7,15 +7,13 @@ import { DottedSurface } from "@/components/ui/dotted-surface";
 export default function BookingServicePage() {
   return (
     <>
-      <div className="relative z-[1]">
-        <DottedSurface />
-        <CursorGlow />
-        <Navbar />
-        <main>
-          <BookingPage />
-        </main>
-        <Footer />
-      </div>
+      <DottedSurface />
+      <CursorGlow />
+      <Navbar />
+      <main>
+        <BookingPage />
+      </main>
+      <Footer />
     </>
   );
 }
