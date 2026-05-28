@@ -68,8 +68,12 @@ function AnimatedBackground() {
   );
 }
 
-function PricingCard({ plan }: { plan: PricingCardProps }) {
+// Pyramid scale: outer cards smallest, centre largest
+const CARD_SCALES = [0.82, 0.91, 1.0, 0.91, 0.82];
+
+function PricingCard({ plan, index }: { plan: PricingCardProps; index: number }) {
   const Icon = plan.icon;
+  const scale = CARD_SCALES[index] ?? 1;
 
   return (
     <motion.div
@@ -81,7 +85,8 @@ function PricingCard({ plan }: { plan: PricingCardProps }) {
           transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] },
         },
       }}
-      className="relative flex flex-col"
+      style={{ scale }}
+      className="relative flex flex-col origin-bottom"
     >
       {plan.isPopular && (
         <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 z-10 whitespace-nowrap">
@@ -190,10 +195,10 @@ export function ModernPricingPage({
             hidden: {},
             visible: { transition: { staggerChildren: 0.08 } },
           }}
-          className="relative z-10 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-5 gap-4 items-start"
+          className="relative z-10 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-5 gap-4 items-end"
         >
-          {plans.map((plan) => (
-            <PricingCard key={plan.planName} plan={plan} />
+          {plans.map((plan, i) => (
+            <PricingCard key={plan.planName} plan={plan} index={i} />
           ))}
         </motion.div>
       </div>
