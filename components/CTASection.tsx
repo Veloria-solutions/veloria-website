@@ -8,7 +8,7 @@ const badges = ["Free Consultation", "No Tech Knowledge Needed", "Friendly Suppo
 
 export default function CTASection() {
   return (
-    <section id="contact" className="py-36 relative overflow-hidden">
+    <section id="contact" className="py-36 bg-[#0C0C0C] relative overflow-hidden">
       {/* Glow */}
       <div
         aria-hidden="true"

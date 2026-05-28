@@ -56,7 +56,7 @@ export default function RetainerPage() {
       </section>
 
       {/* What You Get */}
-      <section className="py-24 bg-transparent">
+      <section className="py-24 bg-[#0C0C0C]">
         <div className="max-w-4xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 24 }}
@@ -97,7 +97,7 @@ export default function RetainerPage() {
       <ProjectShowcase />
 
       {/* CTA Strip */}
-      <section className="py-24 bg-transparent relative overflow-hidden">
+      <section className="py-24 bg-[#0C0C0C] relative overflow-hidden">
         <div
           aria-hidden="true"
           className="absolute inset-0 pointer-events-none"

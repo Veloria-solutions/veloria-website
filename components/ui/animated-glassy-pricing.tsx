@@ -179,7 +179,7 @@ export function ModernPricingPage({
       </motion.div>
 
       {/* Cards + animated background */}
-      <div className="relative rounded-3xl p-6">
+      <div className="relative rounded-3xl p-6 border border-white/[0.04] bg-white/[0.01]">
         {showAnimatedBackground && <AnimatedBackground />}
 
         <motion.div
