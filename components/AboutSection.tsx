@@ -12,7 +12,7 @@ const highlights = [
 
 export default function AboutSection() {
   return (
-    <section id="about" className="py-32 bg-[#0C0C0C] relative overflow-hidden">
+    <section id="about" className="py-32 relative overflow-hidden">
       {/* Background accent */}
       <div
         aria-hidden="true"
