@@ -8,12 +8,14 @@ export default function RetainerServicePage() {
   return (
     <>
       <DottedSurface />
-      <CursorGlow />
-      <Navbar />
-      <main>
-        <RetainerPage />
-      </main>
-      <Footer />
+      <div className="relative z-[1]">
+        <CursorGlow />
+        <Navbar />
+        <main>
+          <RetainerPage />
+        </main>
+        <Footer />
+      </div>
     </>
   );
 }

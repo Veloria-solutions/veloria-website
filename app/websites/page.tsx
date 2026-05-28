@@ -238,6 +238,7 @@ export default function WebsitesPage() {
   return (
     <>
       <DottedSurface />
+      <div className="relative z-[1]">
       <CursorGlow />
       <Navbar />
       <main>
@@ -441,6 +442,7 @@ export default function WebsitesPage() {
         </section>
       </main>
       <Footer />
+      </div>
     </>
   );
 }

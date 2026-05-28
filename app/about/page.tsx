@@ -8,12 +8,14 @@ export default function AboutPage() {
   return (
     <>
       <DottedSurface />
-      <CursorGlow />
-      <Navbar />
-      <main>
-        <AboutSection />
-      </main>
-      <Footer />
+      <div className="relative z-[1]">
+        <CursorGlow />
+        <Navbar />
+        <main>
+          <AboutSection />
+        </main>
+        <Footer />
+      </div>
     </>
   );
 }

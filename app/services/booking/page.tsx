@@ -8,12 +8,14 @@ export default function BookingServicePage() {
   return (
     <>
       <DottedSurface />
-      <CursorGlow />
-      <Navbar />
-      <main>
-        <BookingPage />
-      </main>
-      <Footer />
+      <div className="relative z-[1]">
+        <CursorGlow />
+        <Navbar />
+        <main>
+          <BookingPage />
+        </main>
+        <Footer />
+      </div>
     </>
   );
 }

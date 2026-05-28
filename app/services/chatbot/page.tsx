@@ -8,12 +8,14 @@ export default function ChatbotServicePage() {
   return (
     <>
       <DottedSurface />
-      <CursorGlow />
-      <Navbar />
-      <main>
-        <ChatbotPage />
-      </main>
-      <Footer />
+      <div className="relative z-[1]">
+        <CursorGlow />
+        <Navbar />
+        <main>
+          <ChatbotPage />
+        </main>
+        <Footer />
+      </div>
     </>
   );
 }

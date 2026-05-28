@@ -8,12 +8,14 @@ export default function WebsitesServicePage() {
   return (
     <>
       <DottedSurface />
-      <CursorGlow />
-      <Navbar />
-      <main>
-        <WebsitesPage />
-      </main>
-      <Footer />
+      <div className="relative z-[1]">
+        <CursorGlow />
+        <Navbar />
+        <main>
+          <WebsitesPage />
+        </main>
+        <Footer />
+      </div>
     </>
   );
 }

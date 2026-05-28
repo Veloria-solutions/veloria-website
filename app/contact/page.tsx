@@ -8,12 +8,14 @@ export default function ContactPage() {
   return (
     <>
       <DottedSurface />
-      <CursorGlow />
-      <Navbar />
-      <main>
-        <CTASection />
-      </main>
-      <Footer />
+      <div className="relative z-[1]">
+        <CursorGlow />
+        <Navbar />
+        <main>
+          <CTASection />
+        </main>
+        <Footer />
+      </div>
     </>
   );
 }
