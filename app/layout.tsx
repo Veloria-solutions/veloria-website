@@ -9,14 +9,14 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Veloria Solutions — Professional Websites for Businesses",
+  title: "Veloria Solutions — Digital Solutions for Businesses",
   description:
     "Veloria Solutions builds professional websites and smart tools for businesses. Get online, attract more customers, and grow — no tech knowledge needed.",
   keywords: ["business website", "website design", "small business website", "professional website", "web design Ireland", "website builder"],
   authors: [{ name: "Veloria Solutions" }],
   creator: "Veloria Solutions",
   openGraph: {
-    title: "Veloria Solutions — Professional Websites for Businesses",
+    title: "Veloria Solutions — Digital Solutions for Businesses",
     description:
       "We build professional websites for businesses. Get online and attract more customers — no tech knowledge needed.",
     url: "https://veloria.solutions",
