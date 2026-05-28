@@ -92,28 +92,28 @@ function PricingCard({ plan }: { plan: PricingCardProps }) {
       )}
 
       <div
-        className={`relative flex flex-col h-full rounded-2xl p-5 border backdrop-blur-xl transition-all duration-300 group overflow-hidden ${
+        className={`relative flex flex-col h-full rounded-2xl p-7 border backdrop-blur-xl transition-all duration-300 group overflow-hidden ${
           plan.isPopular
             ? "bg-white/[0.07] border-[#8DBBFF]/35 shadow-[0_0_32px_rgba(141,187,255,0.1)]"
             : "bg-white/[0.03] border-white/[0.07] hover:border-[#8DBBFF]/20 hover:bg-white/[0.05]"
         }`}
       >
-        <div className="relative z-10 flex flex-col gap-4 flex-1">
+        <div className="relative z-10 flex flex-col gap-5 flex-1">
           {/* Icon */}
           {Icon && (
             <div
-              className={`p-2.5 w-fit rounded-xl transition-colors duration-300 ${
+              className={`p-3 w-fit rounded-xl transition-colors duration-300 ${
                 plan.isPopular
                   ? "bg-[#8DBBFF]/15"
                   : "bg-white/[0.05] group-hover:bg-[#8DBBFF]/10"
               }`}
             >
-              <Icon size={20} className="text-[#8DBBFF]" />
+              <Icon size={24} className="text-[#8DBBFF]" />
             </div>
           )}
 
           {/* Title */}
-          <h3 className="text-white font-bold text-[15px] leading-snug font-satoshi">
+          <h3 className="text-white font-bold text-[18px] leading-snug font-satoshi">
             {plan.planName}
           </h3>
 
@@ -121,14 +121,14 @@ function PricingCard({ plan }: { plan: PricingCardProps }) {
           <div className="h-px bg-white/[0.07]" />
 
           {/* Features */}
-          <ul className="flex flex-col gap-2 flex-1">
+          <ul className="flex flex-col gap-3 flex-1">
             {plan.features.map((f) => (
-              <li key={f} className="flex items-start gap-2">
+              <li key={f} className="flex items-start gap-2.5">
                 <Check
-                  size={11}
+                  size={13}
                   className="text-[#8DBBFF] mt-[3px] shrink-0"
                 />
-                <span className="text-[#A1A1A1] text-[11.5px] leading-relaxed">
+                <span className="text-[#A1A1A1] text-[13px] leading-relaxed">
                   {f}
                 </span>
               </li>
@@ -138,7 +138,7 @@ function PricingCard({ plan }: { plan: PricingCardProps }) {
           {/* CTA */}
           <Link
             href={plan.href ?? "/#contact"}
-            className={`mt-3 flex items-center justify-center py-2.5 px-4 rounded-full text-[12px] font-bold tracking-wide transition-all duration-300 ${
+            className={`mt-3 flex items-center justify-center py-3 px-5 rounded-full text-[13px] font-bold tracking-wide transition-all duration-300 ${
               plan.buttonVariant === "primary" || plan.isPopular
                 ? "bg-[#8DBBFF] text-black hover:bg-white"
                 : "bg-white/[0.06] text-white border border-white/10 hover:bg-[#8DBBFF] hover:text-black hover:border-[#8DBBFF]"

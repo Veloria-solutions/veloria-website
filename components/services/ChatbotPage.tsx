@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { CheckCircle2 } from "lucide-react";
 import Link from "next/link";
+import ProjectShowcase from "@/components/ProjectShowcase";
 
 const features = [
   "AI-powered chat interface",
@@ -10,24 +11,6 @@ const features = [
   "FAQ & knowledge base integration",
   "Lead qualification & routing",
   "Multi-platform support",
-];
-
-const steps = [
-  {
-    n: "01",
-    title: "We integrate",
-    desc: "We connect the chatbot to your website and configure it around your business needs and tone.",
-  },
-  {
-    n: "02",
-    title: "We train",
-    desc: "We build out your knowledge base so the chatbot answers the questions your customers actually ask.",
-  },
-  {
-    n: "03",
-    title: "You engage",
-    desc: "Your chatbot handles inquiries around the clock — you step in only when it matters most.",
-  },
 ];
 
 const fadeUp = {
@@ -54,13 +37,6 @@ export default function ChatbotPage() {
             variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.12 } } }}
             className="flex flex-col items-center gap-7"
           >
-            <motion.div variants={fadeUp}>
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/[0.04]">
-                <span className="text-[#8DBBFF] text-[11px] tracking-[0.22em] uppercase">
-                  Intelligent Chatbot Solutions
-                </span>
-              </div>
-            </motion.div>
             <motion.h1
               variants={fadeUp}
               className="text-5xl md:text-[72px] font-black leading-[0.95] tracking-tight font-satoshi"
@@ -74,14 +50,6 @@ export default function ChatbotPage() {
             >
               AI-powered chatbots that automate customer interactions, answer questions, and improve response times — so your business is always available.
             </motion.p>
-            <motion.div variants={fadeUp}>
-              <Link
-                href="/contact"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-white text-black font-bold text-[13.5px] tracking-wide rounded-full hover:bg-[#8DBBFF] hover:scale-[1.04] transition-all duration-300 shadow-xl shadow-white/10"
-              >
-                Get started with a chatbot
-              </Link>
-            </motion.div>
           </motion.div>
         </div>
       </section>
@@ -124,48 +92,8 @@ export default function ChatbotPage() {
         </div>
       </section>
 
-      {/* How It Works */}
-      <section className="py-24">
-        <div className="max-w-4xl mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.75 }}
-            className="mb-14"
-          >
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/[0.04] mb-7">
-              <span className="text-[#8DBBFF] text-[11px] tracking-[0.22em] uppercase">
-                How It Works
-              </span>
-            </div>
-            <h2 className="text-3xl md:text-[46px] font-black leading-tight tracking-tight font-satoshi">
-              Simple setup,{" "}
-              <span className="gradient-text">always-on results.</span>
-            </h2>
-          </motion.div>
-          <div className="flex flex-col gap-6">
-            {steps.map((step, i) => (
-              <motion.div
-                key={step.n}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1, duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
-                className="flex gap-6 items-start p-6 rounded-2xl bg-[#1E1E1E] border border-[#232323]"
-              >
-                <span className="text-[#8DBBFF] font-black text-2xl font-satoshi shrink-0 leading-none mt-0.5">
-                  {step.n}
-                </span>
-                <div>
-                  <h3 className="text-white font-bold text-[17px] mb-1.5 font-satoshi">{step.title}</h3>
-                  <p className="text-[#A1A1A1] text-sm leading-relaxed">{step.desc}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Our Work */}
+      <ProjectShowcase />
 
       {/* CTA Strip */}
       <section className="py-24 bg-[#0C0C0C] relative overflow-hidden">
