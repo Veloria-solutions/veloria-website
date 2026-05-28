@@ -7,8 +7,8 @@ import { DottedSurface } from "@/components/ui/dotted-surface";
 export default function ChatbotServicePage() {
   return (
     <>
-      <DottedSurface />
       <div className="relative z-[1]">
+        <DottedSurface />
         <CursorGlow />
         <Navbar />
         <main>

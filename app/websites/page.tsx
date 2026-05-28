@@ -237,8 +237,8 @@ function ProjectCard({
 export default function WebsitesPage() {
   return (
     <>
-      <DottedSurface />
       <div className="relative z-[1]">
+      <DottedSurface />
       <CursorGlow />
       <Navbar />
       <main>
