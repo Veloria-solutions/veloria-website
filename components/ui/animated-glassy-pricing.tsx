@@ -92,10 +92,10 @@ function PricingCard({ plan }: { plan: PricingCardProps }) {
       )}
 
       <div
-        className={`relative flex flex-col h-full rounded-2xl p-7 border backdrop-blur-xl transition-all duration-300 group overflow-hidden ${
+        className={`relative flex flex-col h-full rounded-2xl p-7 backdrop-blur-xl transition-all duration-300 group overflow-hidden ${
           plan.isPopular
-            ? "bg-white/[0.07] border-[#8DBBFF]/35 shadow-[0_0_32px_rgba(141,187,255,0.1)]"
-            : "bg-white/[0.03] border-white/[0.07] hover:border-[#8DBBFF]/20 hover:bg-white/[0.05]"
+            ? "bg-white/[0.07] shadow-[0_0_32px_rgba(141,187,255,0.1)]"
+            : "bg-white/[0.03] hover:bg-white/[0.05]"
         }`}
       >
         <div className="relative z-10 flex flex-col gap-5 flex-1">
