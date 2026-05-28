@@ -8,8 +8,6 @@ const bundles = [
   {
     icon: Globe,
     title: "Business Website",
-    description:
-      "A professional website that looks great, loads fast, and helps customers find and trust your business.",
     features: [
       "Custom website design",
       "Mobile-responsive layout",
@@ -19,14 +17,12 @@ const bundles = [
     ],
     coreSolution:
       "Creating a strong online presence that builds credibility and generates leads.",
-    href: "/#contact",
+    href: "/services/websites",
     isPopular: false,
   },
   {
     icon: Bot,
     title: "Intelligent Chatbot Solutions",
-    description:
-      "AI-powered chatbots that automate customer interactions, answer questions, and improve response times.",
     features: [
       "AI-powered chat interface",
       "24/7 automated responses",
@@ -36,14 +32,12 @@ const bundles = [
     ],
     coreSolution:
       "Automating customer communication and support to save time and improve engagement.",
-    href: "/#contact",
+    href: "/services/chatbot",
     isPopular: false,
   },
   {
     icon: Layers,
     title: "Full-Service Retainer",
-    description:
-      "All four services fully integrated and maintained every month — one team, one strategy, complete coverage.",
     features: [
       "Complete website design & management",
       "Intelligent chatbot integration",
@@ -54,14 +48,12 @@ const bundles = [
     ],
     coreSolution:
       "A complete digital solution managed monthly so your business stays ahead, always.",
-    href: "/#contact",
+    href: "/services/retainer",
     isPopular: true,
   },
   {
     icon: Calendar,
     title: "Reservation Systems",
-    description:
-      "Streamlined reservation platforms that simplify scheduling and enhance customer experience.",
     features: [
       "Online booking interface",
       "Real-time availability calendar",
@@ -71,14 +63,12 @@ const bundles = [
     ],
     coreSolution:
       "Simplifying and organizing bookings to improve efficiency and customer convenience.",
-    href: "/#contact",
+    href: "/services/reservation",
     isPopular: false,
   },
   {
     icon: CalendarCheck,
     title: "Automated Appointment Booking",
-    description:
-      "Smart booking solutions that automate appointments, confirmations, reminders, and client management.",
     features: [
       "Smart scheduling system",
       "Automated reminders & notifications",
@@ -88,7 +78,7 @@ const bundles = [
     ],
     coreSolution:
       "Reducing manual scheduling through automated booking, reminders, and calendar management.",
-    href: "/#contact",
+    href: "/services/booking",
     isPopular: false,
   },
 ];
@@ -106,10 +96,10 @@ export default function ServicesSection() {
           className="text-center mb-20"
         >
           <h2 className="text-4xl md:text-[58px] font-black leading-tight tracking-tight mb-5 font-satoshi">
-            Our Five <span className="gradient-text">Bundles</span>
+            Choose What <span className="gradient-text">Works for You</span>
           </h2>
           <p className="text-[#A1A1A1] text-lg max-w-2xl mx-auto leading-relaxed">
-            Veloria Solutions delivers professional website design, intelligent chatbots, reservation systems, and automated appointment booking services. Four core services. All built around your business.
+            Veloria Solutions delivers professional website design, intelligent chatbots, reservation systems, and automated appointment booking services. All built around your business.
           </p>
         </motion.div>
 
@@ -176,15 +166,10 @@ export default function ServicesSection() {
                     <bundle.icon size={22} className="text-[#8DBBFF]" />
                   </div>
 
-                  {/* Title & description */}
-                  <div>
-                    <h3 className="text-white font-bold text-[16px] leading-snug mb-2 font-satoshi">
-                      {bundle.title}
-                    </h3>
-                    <p className="text-[#A1A1A1] text-[12.5px] leading-relaxed">
-                      {bundle.description}
-                    </p>
-                  </div>
+                  {/* Title */}
+                  <h3 className="text-white font-bold text-[16px] leading-snug font-satoshi">
+                    {bundle.title}
+                  </h3>
 
                   {/* Features */}
                   <ul className="flex flex-col gap-2">
