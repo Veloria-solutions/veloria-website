@@ -68,8 +68,12 @@ function AnimatedBackground() {
   );
 }
 
+// Cards 1&5 pushed down most, 2&4 medium, 3 (centre) stays at top
+const TRANSLATE_Y = [40, 20, 0, 20, 40];
+
 function PricingCard({ plan, index }: { plan: PricingCardProps; index: number }) {
   const Icon = plan.icon;
+  const translateY = TRANSLATE_Y[index] ?? 0;
 
   return (
     <motion.div
@@ -81,6 +85,7 @@ function PricingCard({ plan, index }: { plan: PricingCardProps; index: number })
           transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] },
         },
       }}
+      style={{ transform: `translateY(${translateY}px)` }}
       className="relative flex flex-col h-full"
     >
       {plan.isPopular && (
@@ -190,7 +195,7 @@ export function ModernPricingPage({
             hidden: {},
             visible: { transition: { staggerChildren: 0.08 } },
           }}
-          className="relative z-10 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-5 gap-4 items-stretch"
+          className="relative z-10 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-5 gap-4 items-start pb-[40px]"
         >
           {plans.map((plan, i) => (
             <PricingCard key={plan.planName} plan={plan} index={i} />
