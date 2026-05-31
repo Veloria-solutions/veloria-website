@@ -6,6 +6,7 @@ import Image from "next/image";
 const projects = [
   { src: "/testimonials/oscar.png",   alt: "Oscar — Client Project"   },
   { src: "/testimonials/balinea.png", alt: "Balinea — Client Project" },
+  { src: "/testimonials/paititi.png", alt: "Paititi — Client Project" },
 ];
 
 export default function ProjectShowcase() {
@@ -30,7 +31,7 @@ export default function ProjectShowcase() {
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {projects.map((p, i) => (
             <motion.div
               key={p.src}
