@@ -81,7 +81,7 @@ function PricingCard({ plan }: { plan: PricingCardProps }) {
           transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] },
         },
       }}
-      className="relative flex flex-col"
+      className="relative flex flex-col h-full"
     >
       {plan.isPopular && (
         <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 z-10 whitespace-nowrap">
@@ -137,7 +137,7 @@ function PricingCard({ plan }: { plan: PricingCardProps }) {
 
           {/* CTA */}
           <Link
-            href={plan.href ?? "/#contact"}
+            href={plan.href ?? "/contact"}
             className={`mt-3 flex items-center justify-center py-3 px-5 rounded-full text-[13px] font-bold tracking-wide transition-all duration-300 ${
               plan.buttonVariant === "primary" || plan.isPopular
                 ? "bg-[#8DBBFF] text-black hover:bg-white"
@@ -190,7 +190,7 @@ export function ModernPricingPage({
             hidden: {},
             visible: { transition: { staggerChildren: 0.08 } },
           }}
-          className="relative z-10 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-5 gap-4 items-start"
+          className="relative z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-5 gap-4 items-stretch"
         >
           {plans.map((plan) => (
             <PricingCard key={plan.planName} plan={plan} />

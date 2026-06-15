@@ -46,7 +46,8 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className={`${inter.variable} font-sans bg-[#090909] text-white antialiased`}>
+      <body className={`${inter.variable} font-sans text-white antialiased`}>
+        <div className="fixed inset-0 grid-bg pointer-events-none" style={{ zIndex: -1 }} aria-hidden="true" />
         {children}
         <CookieConsent />
       </body>

@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, Mail } from "lucide-react";
 import Link from "next/link";
 
-const badges = ["Free Consultation", "No Tech Knowledge Needed", "Friendly Support"];
+const badges = ["Free Consultation", "Friendly Support"];
 
 export default function CTASection() {
   return (
@@ -15,10 +15,9 @@ export default function CTASection() {
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            "radial-gradient(ellipse 65% 65% at 50% 50%, rgba(141,187,255,0.09) 0%, transparent 68%)",
+            "radial-gradient(ellipse 80% 60% at 50% 50%, rgba(141,187,255,0.13) 0%, transparent 70%)",
         }}
       />
-      <div className="absolute inset-0 grid-bg opacity-50" aria-hidden="true" />
 
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
         <motion.div

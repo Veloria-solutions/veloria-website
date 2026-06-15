@@ -10,6 +10,13 @@ const highlights = [
   "We handle everything from start to finish",
 ];
 
+const stats = [
+  { value: "30+", label: "Projects Delivered" },
+  { value: "100%", label: "On-Time Launch" },
+  { value: "5★", label: "Client Rating" },
+  { value: "3", label: "Countries Served" },
+];
+
 export default function AboutSection() {
   return (
     <section id="about" className="py-32 relative overflow-hidden">
@@ -24,7 +31,8 @@ export default function AboutSection() {
       />
 
       <div className="max-w-7xl mx-auto px-6">
-        <div className="max-w-2xl">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          {/* Left col — existing content */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -75,6 +83,33 @@ export default function AboutSection() {
                 </motion.div>
               ))}
             </div>
+          </motion.div>
+
+          {/* Right col — stats panel */}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
+            className="grid grid-cols-2 gap-4"
+          >
+            {stats.map((stat, i) => (
+              <motion.div
+                key={stat.label}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.2 + i * 0.1, duration: 0.6 }}
+                className="flex flex-col items-center justify-center gap-2 rounded-2xl border border-white/[0.07] bg-white/[0.03] hover:bg-white/[0.05] transition-colors duration-300 p-8"
+              >
+                <span className="text-4xl font-black tracking-tight gradient-text font-satoshi">
+                  {stat.value}
+                </span>
+                <span className="text-[#A1A1A1] text-[13px] text-center leading-snug">
+                  {stat.label}
+                </span>
+              </motion.div>
+            ))}
           </motion.div>
         </div>
       </div>

@@ -1,3 +1,9 @@
+export const metadata = {
+  title: "Our Services | Veloria Solutions",
+  description:
+    "Website design, chatbots, reservation systems, appointment booking, and full-service retainers — explore everything Veloria Solutions offers.",
+};
+
 import CursorGlow from "@/components/CursorGlow";
 import Navbar from "@/components/Navbar";
 import ServicesSection from "@/components/ServicesSection";

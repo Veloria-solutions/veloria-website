@@ -6,10 +6,8 @@ import VeloriaLogo from "./VeloriaLogo";
 
 const navLinks = [
   { label: "Home", href: "/" },
-  { label: "Services", href: "/#services" },
-  { label: "About", href: "/#about" },
-  { label: "Contact", href: "/#contact" },
-  { label: "Websites", href: "/websites" },
+  { label: "Services", href: "/services" },
+  { label: "About", href: "/about" },
 ];
 
 const social = [
@@ -81,10 +79,10 @@ export default function Footer() {
               </Link>
               <span className="text-[#A1A1A1] text-[13.5px]">veloria.solutions</span>
               <Link
-                href="/#contact"
+                href="/contact"
                 className="mt-2 inline-flex items-center gap-2 px-5 py-2.5 bg-white text-black text-[12px] font-semibold tracking-wide rounded-full hover:bg-[#8DBBFF] transition-all duration-300 w-fit"
               >
-                Book Consultation
+                Contact Us
               </Link>
             </div>
           </div>

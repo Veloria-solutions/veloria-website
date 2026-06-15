@@ -23,10 +23,11 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden grid-bg"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
       {/* ── Background FX ─────────────────────────────────── */}
       <WovenCanvas />
+
 
       {/* ── Main content ──────────────────────────────────── */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 pt-36 pb-24 flex flex-col items-center text-center">

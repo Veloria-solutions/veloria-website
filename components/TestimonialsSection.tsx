@@ -46,7 +46,7 @@ export default function TestimonialsSection() {
   const next = () => setCurrent((c) => (c + 1) % n);
 
   return (
-    <section className="py-32 bg-[#090909] relative overflow-hidden">
+    <section className="py-32 relative overflow-hidden">
       <div
         aria-hidden="true"
         className="absolute inset-0 pointer-events-none"

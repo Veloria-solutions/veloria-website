@@ -10,7 +10,6 @@ const navLinks = [
   { label: "Home", href: "/" },
   { label: "Services", href: "/services" },
   { label: "About", href: "/about" },
-  { label: "Contact", href: "/contact" },
 ];
 
 export default function Navbar() {
@@ -35,10 +34,16 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-        {/* Logo */}
-        <Link href="/" aria-label="Veloria Solutions Home">
-          <VeloriaLogo />
-        </Link>
+        {/* Logo + agency label */}
+        <div className="flex items-center gap-4">
+          <Link href="/" aria-label="Veloria Solutions Home">
+            <VeloriaLogo />
+          </Link>
+          <div className="hidden md:flex items-center gap-3">
+            <div className="w-px h-4 bg-white/[0.12]" />
+            <span className="text-[#555] text-[11px] tracking-[0.18em] uppercase">AI Automation Agency</span>
+          </div>
+        </div>
 
         {/* Desktop links */}
         <nav className="hidden md:flex items-center gap-9">
@@ -60,7 +65,7 @@ export default function Navbar() {
             href="/contact"
             className="hidden md:inline-flex items-center px-5 py-2.5 bg-white text-black text-[13px] font-semibold tracking-wide rounded-full hover:bg-[#8DBBFF] hover:scale-[1.03] transition-all duration-300 shadow-lg shadow-white/5"
           >
-            Book Consultation
+            Contact Us
           </Link>
           <button
             onClick={() => setOpen((v) => !v)}
@@ -98,7 +103,7 @@ export default function Navbar() {
                 onClick={() => setOpen(false)}
                 className="mt-1 text-center px-5 py-3 bg-white text-black text-sm font-semibold tracking-wide rounded-full"
               >
-                Book Consultation
+                Contact Us
               </Link>
             </div>
           </motion.div>

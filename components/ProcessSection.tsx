@@ -32,7 +32,7 @@ const steps = [
 
 export default function ProcessSection() {
   return (
-    <section className="py-32 bg-[#090909] relative overflow-hidden grid-bg">
+    <section className="py-32 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         <motion.div
