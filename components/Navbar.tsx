@@ -33,8 +33,8 @@ export default function Navbar() {
           : "bg-transparent py-6"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-        {/* Logo + agency label */}
+      <div className="max-w-7xl mx-auto px-6 grid grid-cols-3 items-center">
+        {/* Left — Logo + agency label */}
         <div className="flex items-center gap-4">
           <Link href="/" aria-label="Veloria Solutions Home">
             <VeloriaLogo />
@@ -45,8 +45,8 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* Desktop links */}
-        <nav className="hidden md:flex items-center gap-9">
+        {/* Center — Desktop links */}
+        <nav className="hidden md:flex items-center justify-center gap-9">
           {navLinks.map((link) => (
             <Link
               key={link.label}
@@ -59,8 +59,8 @@ export default function Navbar() {
           ))}
         </nav>
 
-        {/* CTA + Mobile toggle */}
-        <div className="flex items-center gap-3">
+        {/* Right — CTA + Mobile toggle */}
+        <div className="flex items-center justify-end gap-3">
           <Link
             href="/contact"
             className="hidden md:inline-flex items-center px-5 py-2.5 bg-white text-black text-[13px] font-semibold tracking-wide rounded-full hover:bg-[#8DBBFF] hover:scale-[1.03] transition-all duration-300 shadow-lg shadow-white/5"
