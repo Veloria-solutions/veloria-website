@@ -19,7 +19,7 @@ type Status = "idle" | "sending" | "success" | "error";
 
 export default function ContactForm() {
   const [status, setStatus] = useState<Status>("idle");
-  const [form, setForm] = useState({ name: "", email: "", service: "", message: "" });
+  const [form, setForm] = useState({ name: "", email: "", service: "", message: "", website: "" });
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
@@ -27,6 +27,13 @@ export default function ContactForm() {
 
   async function handleSubmit(e: FormEvent) {
     e.preventDefault();
+    // Honeypot: real visitors never see or fill this field, so a value means a bot.
+    // Pretend success so the bot gets no signal that it was filtered.
+    if (form.website) {
+      setStatus("success");
+      setForm({ name: "", email: "", service: "", message: "", website: "" });
+      return;
+    }
     setStatus("sending");
     try {
       await emailjs.send(
@@ -41,7 +48,7 @@ export default function ContactForm() {
         PUBLIC_KEY,
       );
       setStatus("success");
-      setForm({ name: "", email: "", service: "", message: "" });
+      setForm({ name: "", email: "", service: "", message: "", website: "" });
     } catch {
       setStatus("error");
     }
@@ -52,6 +59,20 @@ export default function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+      {/* Honeypot — hidden from real users, bots tend to fill it */}
+      <div className="absolute -left-[9999px] top-auto w-px h-px overflow-hidden" aria-hidden="true">
+        <label htmlFor="website">Website</label>
+        <input
+          id="website"
+          name="website"
+          type="text"
+          tabIndex={-1}
+          autoComplete="off"
+          value={form.website}
+          onChange={handleChange}
+        />
+      </div>
+
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div className="flex flex-col gap-1.5">
           <label htmlFor="name" className="text-[#A1A1A1] text-[12px] tracking-wide">
@@ -62,6 +83,7 @@ export default function ContactForm() {
             name="name"
             type="text"
             required
+            maxLength={100}
             value={form.name}
             onChange={handleChange}
             placeholder="Jane Smith"
@@ -77,6 +99,7 @@ export default function ContactForm() {
             name="email"
             type="email"
             required
+            maxLength={254}
             value={form.email}
             onChange={handleChange}
             placeholder="jane@company.com"
@@ -112,6 +135,7 @@ export default function ContactForm() {
           id="message"
           name="message"
           required
+          maxLength={2000}
           rows={5}
           value={form.message}
           onChange={handleChange}
@@ -122,7 +146,7 @@ export default function ContactForm() {
 
       <button
         type="submit"
-        disabled={status === "sending" || status === "success"}
+        disabled={status === "sending"}
         className="flex items-center justify-center gap-2.5 px-6 py-3.5 bg-white text-black text-[13px] font-bold tracking-wide rounded-full hover:bg-[#8DBBFF] disabled:opacity-60 disabled:cursor-not-allowed transition-all duration-300"
       >
         {status === "sending" ? (
