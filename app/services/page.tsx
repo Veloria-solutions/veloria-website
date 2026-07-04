@@ -5,12 +5,14 @@ export const metadata = {
 };
 
 import Navbar from "@/components/Navbar";
+import { DottedSurface } from "@/components/ui/dotted-surface";
 import ServicesSection from "@/components/ServicesSection";
 import Footer from "@/components/Footer";
 
 export default function ServicesPage() {
   return (
     <>
+      <DottedSurface />
       <Navbar />
       <main>
         <ServicesSection />

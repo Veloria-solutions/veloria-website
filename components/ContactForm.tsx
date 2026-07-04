@@ -12,10 +12,7 @@ const PUBLIC_KEY  = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY  ?? "";
 const services = [
   "Business Website",
   "Intelligent Chatbot",
-  "Reservation System",
-  "Appointment Booking",
   "Full-Service Retainer",
-  "Not sure yet",
 ];
 
 type Status = "idle" | "sending" | "success" | "error";

@@ -7,35 +7,24 @@ import { ChevronLeft, ChevronRight, Star } from "lucide-react";
 const testimonials = [
   {
     quote:
-      "Veloria Solutions transformed our operations with their AI automation platform. We've seen a 40% increase in efficiency within just three months of deployment.",
-    name: "Sarah Chen",
-    role: "CTO",
-    company: "NexaCore Technologies",
-    initials: "SC",
+      "From the first call, the team was determined to get it right. We talked through every change together and they actually listened — nothing felt off-the-shelf. It genuinely felt like a partnership, and the price was more than fair for the quality we got. Really happy with how it turned out.",
+    company: "Balinea Holiday Home",
+    initials: "BH",
+    rating: 5,
   },
   {
     quote:
-      "The team delivered exceptional cloud infrastructure that scales perfectly with our growth. Best technology investment we've made in three years — bar none.",
-    name: "Michael Torres",
-    role: "CEO",
-    company: "DataStream Analytics",
-    initials: "MT",
+      "The whole process was smooth and collaborative. We did run into a small issue with the contact form after launch, but the moment we flagged it, they fixed it within a day — no fuss, no chasing. That kind of responsiveness is rare and it's exactly why we'd recommend them.",
+    company: "Paititi Retreats",
+    initials: "PR",
+    rating: 4.8,
   },
   {
     quote:
-      "Their cybersecurity framework gave us complete peace of mind. Professional, thorough, and incredibly responsive. Veloria is the real deal.",
-    name: "Emma Richardson",
-    role: "CISO",
-    company: "Vertex Capital Group",
-    initials: "ER",
-  },
-  {
-    quote:
-      "Working with Veloria felt like having a world-class engineering team embedded in our company. The custom software they built exceeded every expectation.",
-    name: "James Park",
-    role: "VP Engineering",
-    company: "Momentum Labs",
-    initials: "JP",
+      "We wanted to see a demo first before committing, and they made that easy. We loved it straight away — clean and simple, not overly futuristic, exactly the feel we were after. We'll be rolling it into our business. Thank you to the team for letting us see the demo up front.",
+    company: "Oscar – The Mirror",
+    initials: "OM",
+    rating: 5,
   },
 ];
 
@@ -66,8 +55,7 @@ export default function TestimonialsSection() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-[58px] font-black leading-tight tracking-tight font-satoshi">
-            Trusted by{" "}
-            <span className="gradient-text">Industry Leaders</span>
+            Testimonials
           </h2>
         </motion.div>
 
@@ -83,10 +71,21 @@ export default function TestimonialsSection() {
               className="glass rounded-3xl px-10 py-12 text-center glow-blue"
             >
               {/* Stars */}
-              <div className="flex justify-center gap-1 mb-8">
+              <div className="flex items-center justify-center gap-1 mb-8">
                 {Array.from({ length: 5 }).map((_, i) => (
-                  <Star key={i} size={15} className="text-[#8DBBFF] fill-[#8DBBFF]" />
+                  <Star
+                    key={i}
+                    size={15}
+                    className={
+                      i < Math.round(testimonials[current].rating)
+                        ? "text-[#8DBBFF] fill-[#8DBBFF]"
+                        : "text-white/20"
+                    }
+                  />
                 ))}
+                <span className="text-[#A1A1A1] text-[12px] ml-2">
+                  {testimonials[current].rating.toFixed(1)}
+                </span>
               </div>
 
               {/* Quote */}
@@ -103,13 +102,7 @@ export default function TestimonialsSection() {
                 </div>
                 <div className="text-left">
                   <div className="text-white font-semibold text-sm">
-                    {testimonials[current].name}
-                  </div>
-                  <div className="text-[#A1A1A1] text-[12px]">
-                    {testimonials[current].role},{" "}
-                    <span className="text-[#8DBBFF]/80">
-                      {testimonials[current].company}
-                    </span>
+                    {testimonials[current].company}
                   </div>
                 </div>
               </div>

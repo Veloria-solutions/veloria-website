@@ -1,4 +1,5 @@
 import Navbar from "@/components/Navbar";
+import { DottedSurface } from "@/components/ui/dotted-surface";
 import Footer from "@/components/Footer";
 
 const sections = [
@@ -57,6 +58,7 @@ const sections = [
 export default function PrivacyPolicyPage() {
   return (
     <div className="relative z-[1]">
+      <DottedSurface />
       <Navbar />
       <main className="max-w-3xl mx-auto px-6 pt-36 pb-24">
         {/* Header */}

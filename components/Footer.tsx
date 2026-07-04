@@ -79,6 +79,18 @@ export default function Footer() {
               </Link>
               <span className="text-[#A1A1A1] text-[13.5px]">veloria.solutions</span>
               <Link
+                href="tel:+491726510699"
+                className="text-[#A1A1A1] hover:text-white text-[13.5px] transition-colors"
+              >
+                Titus (Co-owner) — +49 172 6510699
+              </Link>
+              <Link
+                href="tel:+43676711991"
+                className="text-[#A1A1A1] hover:text-white text-[13.5px] transition-colors"
+              >
+                Antares (Co-owner) — +43 676 711991
+              </Link>
+              <Link
                 href="/contact"
                 className="mt-2 inline-flex items-center gap-2 px-5 py-2.5 bg-white text-black text-[12px] font-semibold tracking-wide rounded-full hover:bg-[#8DBBFF] transition-all duration-300 w-fit"
               >

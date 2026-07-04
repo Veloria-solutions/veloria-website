@@ -11,9 +11,9 @@ const highlights = [
 ];
 
 const stats = [
-  { value: "30+", label: "Projects Delivered" },
+  { value: "10+", label: "Projects Delivered" },
   { value: "100%", label: "On-Time Launch" },
-  { value: "5★", label: "Client Rating" },
+  { value: "4.8★", label: "Client Rating" },
   { value: "3", label: "Countries Served" },
 ];
 

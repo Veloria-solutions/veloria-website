@@ -1,4 +1,5 @@
 import Navbar from "@/components/Navbar";
+import { DottedSurface } from "@/components/ui/dotted-surface";
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 
@@ -11,6 +12,7 @@ export const metadata = {
 export default function ContactPage() {
   return (
     <>
+      <DottedSurface />
       <Navbar />
       <main>
         <section className="py-36 relative overflow-hidden">
@@ -61,6 +63,21 @@ export default function ContactPage() {
                   >
                     info@veloria.solutions
                   </a>
+                  <p className="text-[#555] text-[12px] mt-4 mb-1">Or give us a call</p>
+                  <div className="flex flex-col gap-1.5">
+                    <a
+                      href="tel:+491726510699"
+                      className="text-[#A1A1A1] hover:text-white text-[13.5px] transition-colors"
+                    >
+                      Titus (Co-owner) — +49 172 6510699
+                    </a>
+                    <a
+                      href="tel:+43676711991"
+                      className="text-[#A1A1A1] hover:text-white text-[13.5px] transition-colors"
+                    >
+                      Antares (Co-owner) — +43 676 711991
+                    </a>
+                  </div>
                 </div>
               </div>
 
