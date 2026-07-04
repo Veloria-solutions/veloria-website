@@ -42,11 +42,6 @@ export default function ProcessSection() {
           transition={{ duration: 0.75 }}
           className="text-center mb-20"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/[0.04] mb-7">
-            <span className="text-[#8DBBFF] text-[11px] tracking-[0.22em] uppercase">
-              Our Process
-            </span>
-          </div>
           <h2 className="text-4xl md:text-[58px] font-black leading-tight tracking-tight mb-5 font-satoshi">
             How It{" "}
             <span className="gradient-text">Works</span>

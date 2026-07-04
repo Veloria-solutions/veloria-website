@@ -64,11 +64,6 @@ export default function BookingPage() {
             transition={{ duration: 0.75 }}
             className="mb-14"
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/[0.04] mb-7">
-              <span className="text-[#8DBBFF] text-[11px] tracking-[0.22em] uppercase">
-                What You Get
-              </span>
-            </div>
             <h2 className="text-3xl md:text-[46px] font-black leading-tight tracking-tight font-satoshi">
               Appointments on{" "}
               <span className="gradient-text">autopilot.</span>

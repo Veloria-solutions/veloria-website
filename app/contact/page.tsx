@@ -1,8 +1,6 @@
-import CursorGlow from "@/components/CursorGlow";
 import Navbar from "@/components/Navbar";
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
-import { DottedSurface } from "@/components/ui/dotted-surface";
 
 export const metadata = {
   title: "Book a Consultation | Veloria Solutions",
@@ -13,8 +11,6 @@ export const metadata = {
 export default function ContactPage() {
   return (
     <>
-      <DottedSurface />
-      <CursorGlow />
       <Navbar />
       <main>
         <section className="py-36 relative overflow-hidden">
@@ -32,16 +28,6 @@ export default function ContactPage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
               {/* Left — intro */}
               <div className="flex flex-col gap-7">
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#8DBBFF]/20 bg-[#8DBBFF]/[0.05] w-fit">
-                  <span className="relative flex h-1.5 w-1.5">
-                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#8DBBFF] opacity-75" />
-                    <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-[#8DBBFF]" />
-                  </span>
-                  <span className="text-[#8DBBFF] text-[11px] tracking-[0.22em] uppercase">
-                    Free Consultation
-                  </span>
-                </div>
-
                 <h1 className="text-4xl md:text-[52px] font-black leading-[1.05] tracking-tight font-satoshi">
                   Let&apos;s Build Something
                   <br />

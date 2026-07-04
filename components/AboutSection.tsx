@@ -39,12 +39,6 @@ export default function AboutSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1] }}
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/[0.04] mb-8">
-              <span className="text-[#8DBBFF] text-[11px] tracking-[0.22em] uppercase">
-                About Veloria
-              </span>
-            </div>
-
             <h2 className="text-4xl md:text-[52px] font-black leading-tight tracking-tight mb-7 font-satoshi">
               Real Solutions,{" "}
               <span className="gradient-text">Built Around</span>

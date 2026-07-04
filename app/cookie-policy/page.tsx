@@ -1,7 +1,5 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import CursorGlow from "@/components/CursorGlow";
-import { DottedSurface } from "@/components/ui/dotted-surface";
 
 const sections = [
   {
@@ -53,8 +51,6 @@ const sections = [
 export default function CookiePolicyPage() {
   return (
     <div className="relative z-[1]">
-      <DottedSurface />
-      <CursorGlow />
       <Navbar />
       <main className="max-w-3xl mx-auto px-6 pt-36 pb-24">
         {/* Header */}

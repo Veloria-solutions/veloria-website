@@ -27,17 +27,6 @@ export default function CTASection() {
           transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1] }}
           className="flex flex-col items-center gap-8"
         >
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#8DBBFF]/20 bg-[#8DBBFF]/[0.05]">
-            <span className="relative flex h-1.5 w-1.5">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#8DBBFF] opacity-75" />
-              <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-[#8DBBFF]" />
-            </span>
-            <span className="text-[#8DBBFF] text-[11px] tracking-[0.22em] uppercase">
-              Get Started Today
-            </span>
-          </div>
-
           {/* Headline */}
           <h2 className="text-4xl md:text-[58px] lg:text-[68px] font-black leading-[1.0] tracking-tight font-satoshi">
             Ready to Get Your

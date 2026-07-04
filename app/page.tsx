@@ -1,4 +1,3 @@
-import CursorGlow from "@/components/CursorGlow";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import SolutionsSection from "@/components/SolutionsSection";
@@ -14,7 +13,6 @@ export const metadata = {
 export default function Home() {
   return (
     <>
-      <CursorGlow />
       <Navbar />
       <main>
         <Hero />

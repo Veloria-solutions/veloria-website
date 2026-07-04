@@ -1,14 +1,10 @@
-import CursorGlow from "@/components/CursorGlow";
 import Navbar from "@/components/Navbar";
 import BookingPage from "@/components/services/BookingPage";
 import Footer from "@/components/Footer";
-import { DottedSurface } from "@/components/ui/dotted-surface";
 
 export default function BookingServicePage() {
   return (
     <>
-      <DottedSurface />
-      <CursorGlow />
       <Navbar />
       <main>
         <BookingPage />

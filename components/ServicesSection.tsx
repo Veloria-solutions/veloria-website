@@ -1,12 +1,14 @@
 "use client";
 
-import { Bot, Globe, Calendar, CalendarCheck, Layers } from "lucide-react";
+import { Bot, Globe, Layers } from "lucide-react";
 import { ModernPricingPage, PricingCardProps } from "@/components/ui/animated-glassy-pricing";
 
 const bundles: PricingCardProps[] = [
   {
     icon: Globe,
     planName: "Business Website",
+    price: "€699",
+    priceNote: "one-time payment",
     features: [
       "Custom website design",
       "Mobile-responsive layout",
@@ -19,22 +21,11 @@ const bundles: PricingCardProps[] = [
     href: "/services/websites",
   },
   {
-    icon: Bot,
-    planName: "Intelligent Chatbot Solutions",
-    features: [
-      "AI-powered chat interface",
-      "24/7 automated responses",
-      "FAQ & knowledge base integration",
-      "Lead qualification & routing",
-      "Multi-platform support",
-    ],
-    buttonText: "Get Started",
-    buttonVariant: "secondary",
-    href: "/services/chatbot",
-  },
-  {
     icon: Layers,
     planName: "Full-Service Retainer",
+    price: "€50",
+    priceNote: "/month · 12-month commitment",
+    savingsNote: "Save €99 compared to the €699 one-time price",
     features: [
       "Complete website design & management",
       "Intelligent chatbot integration",
@@ -49,32 +40,20 @@ const bundles: PricingCardProps[] = [
     isPopular: true,
   },
   {
-    icon: Calendar,
-    planName: "Reservation Systems",
+    icon: Bot,
+    planName: "Intelligent Chatbot Solutions",
+    price: "€699",
+    priceNote: "one-time payment",
     features: [
-      "Online booking interface",
-      "Real-time availability calendar",
-      "Automated confirmation emails",
-      "Customer management dashboard",
-      "Multi-location support",
+      "AI-powered chat interface",
+      "24/7 automated responses",
+      "FAQ & knowledge base integration",
+      "Lead qualification & routing",
+      "Multi-platform support",
     ],
     buttonText: "Get Started",
     buttonVariant: "secondary",
-    href: "/services/reservation",
-  },
-  {
-    icon: CalendarCheck,
-    planName: "Automated Appointment Booking",
-    features: [
-      "Smart scheduling system",
-      "Automated reminders & notifications",
-      "Calendar sync & integrations",
-      "Client self-service portal",
-      "Analytics & reporting",
-    ],
-    buttonText: "Get Started",
-    buttonVariant: "secondary",
-    href: "/services/booking",
+    href: "/services/chatbot",
   },
 ];
 

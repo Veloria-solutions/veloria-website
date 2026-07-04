@@ -55,13 +55,6 @@ export default function AutomationPage() {
             variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.12 } } }}
             className="flex flex-col items-center gap-7"
           >
-            <motion.div variants={fadeUp}>
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/[0.04]">
-                <span className="text-[#8DBBFF] text-[11px] tracking-[0.22em] uppercase">
-                  AI Automation
-                </span>
-              </div>
-            </motion.div>
             <motion.h1
               variants={fadeUp}
               className="text-5xl md:text-[72px] font-black leading-[0.95] tracking-tight font-satoshi"
@@ -98,11 +91,6 @@ export default function AutomationPage() {
             transition={{ duration: 0.75 }}
             className="mb-14"
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/[0.04] mb-7">
-              <span className="text-[#8DBBFF] text-[11px] tracking-[0.22em] uppercase">
-                What You Get
-              </span>
-            </div>
             <h2 className="text-3xl md:text-[46px] font-black leading-tight tracking-tight font-satoshi">
               Your time back,{" "}
               <span className="gradient-text">every week.</span>
@@ -136,11 +124,6 @@ export default function AutomationPage() {
             transition={{ duration: 0.75 }}
             className="mb-14"
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/[0.04] mb-7">
-              <span className="text-[#8DBBFF] text-[11px] tracking-[0.22em] uppercase">
-                How It Works
-              </span>
-            </div>
             <h2 className="text-3xl md:text-[46px] font-black leading-tight tracking-tight font-satoshi">
               We do the hard part,{" "}
               <span className="gradient-text">you reap the rewards.</span>

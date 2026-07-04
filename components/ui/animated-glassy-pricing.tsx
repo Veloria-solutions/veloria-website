@@ -13,6 +13,9 @@ export interface PricingCardProps {
   isPopular?: boolean;
   href?: string;
   icon?: ElementType;
+  price?: string;
+  priceNote?: string;
+  savingsNote?: string;
 }
 
 interface ModernPricingPageProps {
@@ -94,7 +97,7 @@ function PricingCard({ plan }: { plan: PricingCardProps }) {
       <div
         className={`relative flex flex-col h-full rounded-2xl p-7 backdrop-blur-xl transition-all duration-300 group overflow-hidden ${
           plan.isPopular
-            ? "bg-white/[0.07] shadow-[0_0_32px_rgba(141,187,255,0.1)]"
+            ? "bg-white/[0.07] shadow-[0_0_32px_rgba(141,187,255,0.1)] ring-1 ring-[#8DBBFF]/30 md:scale-[1.03]"
             : "bg-white/[0.03] hover:bg-white/[0.05]"
         }`}
       >
@@ -116,6 +119,27 @@ function PricingCard({ plan }: { plan: PricingCardProps }) {
           <h3 className="text-white font-bold text-[18px] leading-snug font-satoshi">
             {plan.planName}
           </h3>
+
+          {/* Price */}
+          {plan.price && (
+            <div>
+              <div className="flex items-baseline gap-2">
+                <span className="text-white font-black text-4xl font-satoshi">
+                  {plan.price}
+                </span>
+                {plan.priceNote && (
+                  <span className="text-[#A1A1A1] text-[12.5px] leading-snug">
+                    {plan.priceNote}
+                  </span>
+                )}
+              </div>
+              {plan.savingsNote && (
+                <p className="mt-2 text-[#8DBBFF] text-[12px] font-medium">
+                  {plan.savingsNote}
+                </p>
+              )}
+            </div>
+          )}
 
           {/* Divider */}
           <div className="h-px bg-white/[0.07]" />
@@ -190,7 +214,7 @@ export function ModernPricingPage({
             hidden: {},
             visible: { transition: { staggerChildren: 0.08 } },
           }}
-          className="relative z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-5 gap-4 items-stretch"
+          className="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-4 items-stretch max-w-5xl mx-auto"
         >
           {plans.map((plan) => (
             <PricingCard key={plan.planName} plan={plan} />
