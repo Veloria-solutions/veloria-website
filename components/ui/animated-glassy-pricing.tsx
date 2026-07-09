@@ -123,8 +123,8 @@ function PricingCard({ plan }: { plan: PricingCardProps }) {
           {/* Price */}
           {plan.price && (
             <div>
-              <div className="flex items-baseline gap-2">
-                <span className="text-white font-black text-4xl font-satoshi">
+              <div className="flex flex-col gap-1.5">
+                <span className="text-white font-black text-3xl font-satoshi">
                   {plan.price}
                 </span>
                 {plan.priceNote && (

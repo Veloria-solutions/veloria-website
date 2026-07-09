@@ -1,14 +1,12 @@
 "use client";
 
-import { Bot, Globe, Layers } from "lucide-react";
 import { ModernPricingPage, PricingCardProps } from "@/components/ui/animated-glassy-pricing";
 
 const bundles: PricingCardProps[] = [
   {
-    icon: Globe,
     planName: "Business Website",
-    price: "€699",
-    priceNote: "one-time payment",
+    price: "Custom Quote",
+    priceNote: "Pricing based on the scope of your one-time project",
     features: [
       "Custom website design",
       "Mobile-responsive layout",
@@ -16,16 +14,15 @@ const bundles: PricingCardProps[] = [
       "Fast load performance",
       "Contact forms & lead capture",
     ],
-    buttonText: "Get Started",
+    buttonText: "Get a Quote",
     buttonVariant: "secondary",
     href: "/services/websites",
   },
   {
-    icon: Layers,
     planName: "Full-Service Retainer",
-    price: "€50",
-    priceNote: "/month · 12-month commitment",
-    savingsNote: "Save €99 compared to the €699 one-time price",
+    price: "Tailored to You",
+    priceNote: "An ongoing retainer shaped around your business needs",
+    savingsNote: "Best value — everything handled for you",
     features: [
       "Complete website design & management",
       "Intelligent chatbot integration",
@@ -34,16 +31,15 @@ const bundles: PricingCardProps[] = [
       "Ongoing maintenance & updates",
       "Dedicated support & strategy",
     ],
-    buttonText: "Get Started",
+    buttonText: "Talk to Us",
     buttonVariant: "primary",
     href: "/services/retainer",
     isPopular: true,
   },
   {
-    icon: Bot,
     planName: "Intelligent Chatbot Solutions",
-    price: "€699",
-    priceNote: "one-time payment",
+    price: "Custom Quote",
+    priceNote: "Priced to fit your chatbot build",
     features: [
       "AI-powered chat interface",
       "24/7 automated responses",
@@ -51,7 +47,7 @@ const bundles: PricingCardProps[] = [
       "Lead qualification & routing",
       "Multi-platform support",
     ],
-    buttonText: "Get Started",
+    buttonText: "Get a Quote",
     buttonVariant: "secondary",
     href: "/services/chatbot",
   },
